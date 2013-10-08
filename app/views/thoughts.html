@@ -1,0 +1,12 @@
+<div ng-controller="ThoughtController">
+    <form>
+        <input type="text" name="thought" ng-model="thought">
+        <button ng-click="addThought()">store thought </button>
+    </form>
+    <div>
+        <ul>
+            <li ng-repeat="thoughts in thoughtService">{{thoughts.text}}</li>
+        </ul>
+    </div>
+    <div>{{thoughtService | json}}</div>
+</div>
